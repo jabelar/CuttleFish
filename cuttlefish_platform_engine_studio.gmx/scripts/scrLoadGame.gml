@@ -1,0 +1,10 @@
+ini_open("savedgame.ini") ;
+saved_room = ini_read_real("game", "room id", room) ;
+global.game_style = ini_read_real("game", "game style", global.game_style) ;
+score = ini_read_real("score", "score", score) ;
+lives = ini_read_real("score", "lives", lives) ;
+global.coins_collected = ini_read_real("score", "coins collected", global.coins_collected) ;
+global.player_character_type = ini_read_string("player", "character type", global.player_character_type) ;
+ini_close() ;
+global.load_game = true ;
+room_goto(saved_room) ;
